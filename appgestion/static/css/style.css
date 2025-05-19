@@ -1,0 +1,26 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar
+{
+    background-color: #333333;
+    color: red;
+    padding: 10px 0;
+}
+
+.carrousel-item
+{
+    max-height: 700px;
+}
+
