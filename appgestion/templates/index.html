@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="{%static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
     <!-- Menú -->
@@ -44,33 +45,169 @@
 
 </section>
 
-<!-- Carrusel -->
-<section id="carrusel">
+<!-- cuadricula de contenido -->
 
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" style="max-height: 700px;">
-      <img src="{% static 'img/campañainvierno.jpg'%}" class="d-block w-100" alt="...">
+<div class="container my-5">
+        <!-- Fila 1: 3 columnas superiores -->
+        <div class="row mb-4">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="{% static 'img/gestiionclinica.jpg'%}" class="card-img-top card-custom-img" alt="Imagen 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Gestión Clínica</h5>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="{% static 'img/metassanitarias.jpg'%}" class="card-img-top card-custom-img" alt="Imagen 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Metas Sanitarias 2025</h5>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="{% static 'img/CONMGES2025.JPG'%}" class="card-img-top card-custom-img" alt="Imagen 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Avance COMGES 2025</h5>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 2: 3 columnas inferiores -->
+        <div class="row">
+            <!-- Tarjeta 4 -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="{% static 'img/conmgess.jpg'%}" class="card-img-top card-custom-img" alt="Imagen 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Resultado Conmges 2025</h5>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 5 -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="{% static 'img/unidadsslr.jpg'%}" class="card-img-top card-custom-img" alt="Imagen 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Unidades SSLR</h5>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 6 -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="{% static 'img/intranet.jpg'%}" class="card-img-top card-custom-img" alt="Imagen 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Intranet SSLR</h5>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="carousel-item" style="max-height: 700px;">
-      <img src="{% static 'img/gestion.jpg'%}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" style="max-height: 700px;">
-      
-      <img src="{% static 'img/metassanitarias.jpg'%}" class="d-block w-100" alt="">
+
+<!-- Cartas Horizontales -->
+
+<!-- Primera Carta Horizontal -->
+<div class="custom-card-container card-ssalr">
+  <div class="card mb-4">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static 'img/ssalr.jpeg' %}" class="img-fluid rounded-start h-100" alt="Servicio Salud Los Ríos" style="object-fit: cover;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Sitio Web Servicio Salud Los Ríos</h5>
+          <p class="card-text">Ingresa aquí al sitio oficial del Servicio de Salud Los Ríos</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
 
+<!-- Segunda Carta Horizontal -->
+<div class="custom-card-container card-guias">
+  <div class="card mb-4">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static 'img/guiaymanuales.jpg' %}" class="img-fluid rounded-start h-100" alt="Guías y Manuales" style="object-fit: cover;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Guías Y Manuales</h5>
+          <p class="card-text">Encuentra aquí las guías y manuales de los distintos instrumentos de medición gestión</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Carrusel -->
+<section id="carrusel">
+    <div class="container my-custom-carousel">  <!-- Contenedor con clase personalizada -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">  <!-- Intervalo de 3 segundos -->
+            <div class="carousel-inner">
+                <!-- Primer slide con enlace -->
+                <a href="tu_pagina_destino_1.html" class="carousel-link">
+                    <div class="carousel-item active" style="max-height: 700px;">
+                        <img src="{% static 'img/cuentapublica.png'%}" class="d-block w-100" alt="Campaña de invierno">
+                    </div>
+                </a>
+                
+                <!-- Segundo slide con enlace -->
+                <a href="tu_pagina_destino_2.html" class="carousel-link">
+                    <div class="carousel-item" style="max-height: 700px;">
+                        <img src="{% static 'img/donemossangre.jpg'%}" class="d-block w-100" alt="Gestión">
+                    </div>
+                </a>
+                
+                <!-- Tercer slide con enlace -->
+                <a href="tu_pagina_destino_3.html" class="carousel-link">
+                    <div class="carousel-item" style="max-height: 700px;">
+                        <img src="{% static 'img/yomevacuno.png'%}" class="d-block w-100" alt="Metas sanitarias">
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Controles del carrusel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
 </section>
+
+<!-- Footer -->
+
+<div class="footer">
+  <div class="container-fluid bg-dark p-5"></div>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>

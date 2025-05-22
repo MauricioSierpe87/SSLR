@@ -24,3 +24,58 @@ body
     max-height: 700px;
 }
 
+/* Estilo para las imágenes de las cards */
+.card-custom-img {
+    width: 100%;       /* Ocupa todo el ancho del contenedor */
+    height: 200px;     /* Altura fija para todas las imágenes (ajusta este valor según necesites) */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio manteniendo su relación de aspecto */
+}
+
+/* Opcional: Estilo para mantener la consistencia en las cards */
+.card {
+    transition: transform 0.3s ease; /* Efecto hover suave */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto hover: levanta ligeramente la card */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio internamente */
+}
+
+/* Estilo para cartas horizontales */
+
+/* Estilos generales para todos los contenedores de tarjetas */
+.custom-card-container {
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  
+  /* Agrega aquí estilos que quieras aplicar a ambas tarjetas */
+}
+
+/* Estilos específicos para la tarjeta del Servicio de Salud */
+.custom-card-container.card-ssalr {
+  background-color: #f8f9fa; /* Ejemplo: fondo gris claro */
+  border: 1px solid #dee2e6; /* Ejemplo: borde sutil */
+  
+}
+
+/* Estilos específicos para la tarjeta de Guías y Manuales */
+.custom-card-container.card-guias {
+  background-color: #e9ecef; /* Ejemplo: fondo gris un poco más oscuro */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Ejemplo: sombra sutil */
+}
+
+/* Puedes modificar elementos internos específicos */
+.custom-card-container.card-ssalr .card-title {
+  color: #0d6efd; /* Color azul para el título */
+}
+
+.custom-card-container.card-guias .btn-primary {
+  background-color: #6c757d; /* Color gris para el botón */
+  border-color: #6c757d;
+}
