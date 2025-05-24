@@ -8,16 +8,11 @@
 body
 {
     font-family: 'Open Sans', sans-serif;
-    background-color: #f4f4f4;
+    background-image: #f4f4f4;
     color: #333;
 }
 
-.navbar
-{
-    background-color: #333333;
-    color: red;
-    padding: 10px 0;
-}
+
 
 .carrousel-item
 {
@@ -29,6 +24,7 @@ body
     width: 100%;       /* Ocupa todo el ancho del contenedor */
     height: 200px;     /* Altura fija para todas las imágenes (ajusta este valor según necesites) */
     object-fit: cover; /* Asegura que la imagen cubra el espacio manteniendo su relación de aspecto */
+
 }
 
 /* Opcional: Estilo para mantener la consistencia en las cards */
@@ -78,4 +74,124 @@ body
 .custom-card-container.card-guias .btn-primary {
   background-color: #6c757d; /* Color gris para el botón */
   border-color: #6c757d;
+}
+
+/* Navbar con imagen de fondo */
+.custom-navbar-with-bg {
+  background-image: url("img/valdivia-city01.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Efecto overlay para mejorar legibilidad */
+.custom-navbar-with-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesidad */
+  z-index: -1;
+}
+
+/* Estilos para el logo */
+.navbar-logo {
+  height: 50px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+/* Estilos para los items del menú */
+.custom-navbar-with-bg .nav-link {
+  color: white !important;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar-with-bg .nav-link:hover {
+  color: #f8f9fa !important;
+  transform: translateY(-2px);
+}
+
+.custom-navbar-with-bg .nav-link.active {
+  color: #ffffff !important;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* Estilos para el botón toggler en móviles */
+.custom-navbar-with-bg .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.custom-navbar-with-bg .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Ajustes para móviles */
+@media (max-width: 992px) {
+  .custom-navbar-with-bg {
+    background-position: top center;
+  }
+  
+  .custom-navbar-with-bg .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+
+/* Estilos para las cards circulares */
+.circular-card {
+    height: 18rem; /* Mismo valor que el width para hacerlas perfectamente circulares */
+    border-radius: 50% !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.circular-card:hover {
+    transform: scale(1.05);
+}
+
+.circular-card .card-img-top {
+    width: 100%;
+    height: 60%; /* Ajusta según necesidad */
+    object-fit: cover;
+    border-top-left-radius: 50% !important;
+    border-top-right-radius: 50% !important;
+}
+
+.circular-card .card-body {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Ajustes para responsive */
+@media (max-width: 768px) {
+    .circular-card {
+        width: 15rem !important;
+        height: 15rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .circular-card {
+        width: 12rem !important;
+        height: 12rem !important;
+    }
 }

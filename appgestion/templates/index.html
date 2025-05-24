@@ -10,40 +10,41 @@
     <link rel="stylesheet" href="{%static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/33ee3f80fc.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Menú -->
-<section id="menu"> 
-
-    <nav class="navbar navbar-expand-sm bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">INICIO</a>
+    <!-- Menú Navbar-->
+<nav class="navbar navbar-expand-lg custom-navbar-with-bg">
+  <div class="container">
+    <!-- Logo y Botón Toggler -->
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'img/ssalr.jpeg' %}" alt="Logo Servicio Salud Los Ríos" class="navbar-logo">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">COMGES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">METAS SANITARIAS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">GESTÓN CLÍNICA</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">GLOSA</a>
-        </li>
-        
-      </ul>
 
-    </div>
+    <!-- Menú de Navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav justify-content-center mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONMGES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">IAAPS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">GLOSA IV</a>
+        </li>
+    </ul>
+  </div>
   </div>
 </nav>
 
-</section>
+
 
 <!-- cuadricula de contenido -->
 
@@ -52,10 +53,10 @@
         <div class="row mb-4">
             <!-- Tarjeta 1 -->
             <div class="col-md-4 mb-3">
-                <div class="card h-100">
-                    <img src="{% static 'img/gestiionclinica.jpg'%}" class="card-img-top card-custom-img" alt="Imagen 1">
+                <div class="card h-100 border-0">
+                    <img src="{% static 'img/gestiionclinica.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 1">
                     <div class="card-body">
-                        <h5 class="card-title">Gestión Clínica</h5>
+                        <h5 class="card-title text-center">Gestión Clínica</h5>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
@@ -63,10 +64,10 @@
             
             <!-- Tarjeta 2 -->
             <div class="col-md-4 mb-3">
-                <div class="card h-100">
-                    <img src="{% static 'img/metassanitarias.jpg'%}" class="card-img-top card-custom-img" alt="Imagen 2">
+                <div class="card h-100 border-0">
+                    <img src="{% static 'img/metassanitarias.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 2">
                     <div class="card-body">
-                        <h5 class="card-title">Metas Sanitarias 2025</h5>
+                        <h5 class="card-title text-center">Metas Sanitarias 2025</h5>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
@@ -74,10 +75,10 @@
             
             <!-- Tarjeta 3 -->
             <div class="col-md-4 mb-3">
-                <div class="card h-100">
-                    <img src="{% static 'img/CONMGES2025.JPG'%}" class="card-img-top card-custom-img" alt="Imagen 3">
+                <div class="card h-100 border-0">
+                    <img src="{% static 'img/CONMGES2025.JPG'%}" class="card-img-top rounded-circle" alt="Imagen 3">
                     <div class="card-body">
-                        <h5 class="card-title">Avance COMGES 2025</h5>
+                        <h5 class="card-title text-center">Avance COMGES 2025</h5>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
@@ -88,10 +89,10 @@
         <div class="row">
             <!-- Tarjeta 4 -->
             <div class="col-md-4 mb-3">
-                <div class="card h-100">
-                    <img src="{% static 'img/conmgess.jpg'%}" class="card-img-top card-custom-img" alt="Imagen 4">
+                <div class="card h-100 border-0">
+                    <img src="{% static 'img/conmgess.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 4">
                     <div class="card-body">
-                        <h5 class="card-title">Resultado Conmges 2025</h5>
+                        <h5 class="card-title text-center">Resultado Conmges 2025</h5>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
@@ -99,10 +100,10 @@
             
             <!-- Tarjeta 5 -->
             <div class="col-md-4 mb-3">
-                <div class="card h-100">
-                    <img src="{% static 'img/unidadsslr.jpg'%}" class="card-img-top card-custom-img" alt="Imagen 5">
+                <div class="card h-100 border-0">
+                    <img src="{% static 'img/unidadsslr.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 5">
                     <div class="card-body">
-                        <h5 class="card-title">Unidades SSLR</h5>
+                        <h5 class="card-title text-center">Unidades SSLR</h5>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
@@ -110,10 +111,10 @@
             
             <!-- Tarjeta 6 -->
             <div class="col-md-4 mb-3">
-                <div class="card h-100">
-                    <img src="{% static 'img/intranet.jpg'%}" class="card-img-top card-custom-img" alt="Imagen 6">
+                <div class="card h-100 border-0">
+                    <img src="{% static 'img/intranet.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 6">
                     <div class="card-body">
-                        <h5 class="card-title">Intranet SSLR</h5>
+                        <h5 class="card-title text-center">Intranet SSLR</h5>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
@@ -206,7 +207,36 @@
 <!-- Footer -->
 
 <div class="footer">
-  <div class="container-fluid bg-dark p-5"></div>
+  <div class="container-fluid bg-dark p-5">
+    <div class="row align-items-center">
+      <!-- Columna izquierda - Información de contacto -->
+      <div class="col-md-6 contact-info">
+        <div class="d-flex flex-column text-white">
+          <span><i class="bi bi-geo-alt-fill me-2"></i> Dirección: Chacabuco #700, Valdivia, Chile</span>
+          <span><i class="bi bi-telephone-fill me-2"></i> Teléfono: (63) 2264800</span>
+          <span><i class="bi bi-envelope-fill me-2"></i> Email: contacto@example.com</span>
+        </div>
+      </div>
+      
+      <!-- Columna derecha - Redes sociales -->
+      <div class="col-md-6 social-icons">
+        <div class="d-flex justify-content-end">
+          <a href="#" class="text-decoration-none text-white mx-3"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="text-decoration-none text-white mx-3"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-decoration-none text-white mx-3"><i class="bi bi-twitter-x fs-4"></i></a>
+          <a href="#" class="text-decoration-none text-white mx-3"><i class="bi bi-youtube fs-4"></i></a>
+          <a href="#" class="text-decoration-none text-white mx-3"><i class="fa-brands fa-flickr fs-4"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Derechos reservados - Nueva fila centrada -->
+    <div class="row mt-3">
+      <div class="col-12 text-center text-white" style="font-size: 20px;">
+        &copy; Todos los derechos reservados Servicio Salud Los Ríos 2025
+      </div>
+    </div>
+  </div>
 </div>
 
 
