@@ -8,7 +8,7 @@
 body
 {
     font-family: 'Open Sans', sans-serif;
-    background-image: #f4f4f4;
+    background-image: ('/static/img/fondo1.jpg');
     color: #333;
 }
 
@@ -77,14 +77,51 @@ body
 }
 
 /* Navbar con imagen de fondo */
+/* Estilos para el navbar transparente */
+  .navbar-transparent {
+    background-color: red ;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Navbar con color al hacer scroll */
+  .navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ajuste de padding para el navbar fijo */
+  
+  
+  /* Estilos para los enlaces del navbar */
+  .navbar-nav .nav-link {
+    color: red ;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #0d6efd(255, 255, 255, 0.8) !important;
+  }
+  
+  /* Logo del navbar */
+  .navbar-logo {
+    height: 40px;
+    transition: height 0.3s ease;
+  }
+  
+  .navbar-scrolled .navbar-logo {
+    height: 30px;
+  }
 .custom-navbar-with-bg {
-  background-image: url("img/valdivia-city01.jpg");
+  background-image: ('/static/img/fondo1.jpg'); /* Cambia la URL por la de tu imagen */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 1rem 0;
   position: relative;
-  z-index: 1;
+  z-index: 1000;
 }
 
 /* Efecto overlay para mejorar legibilidad */
@@ -97,6 +134,7 @@ body
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesidad */
   z-index: -1;
+  
 }
 
 /* Estilos para el logo */
@@ -108,7 +146,7 @@ body
 
 /* Estilos para los items del menú */
 .custom-navbar-with-bg .nav-link {
-  color: white !important;
+  color: red !important;
   font-weight: 600;
   padding: 0.5rem 1.5rem;
   margin: 0 0.25rem;
@@ -118,13 +156,13 @@ body
 }
 
 .custom-navbar-with-bg .nav-link:hover {
-  color: #f8f9fa !important;
+  color: red !important;
   transform: translateY(-2px);
 }
 
 .custom-navbar-with-bg .nav-link.active {
-  color: #ffffff !important;
-  border-bottom: 2px solid #ffffff;
+  color: red !important;
+  border-bottom: 2px solid red;
 }
 
 /* Estilos para el botón toggler en móviles */
@@ -195,3 +233,44 @@ body
         height: 12rem !important;
     }
 }
+
+/* Estilos para el carrusel */
+    .my-custom-carousel {
+        max-width: 1200px; /* Ajusta según necesites */
+        margin: 0 auto;
+    }
+    
+    .carousel-inner {
+        border-radius: 10px; /* Bordes redondeados */
+        overflow: hidden; /* Para que los bordes redondeados se apliquen */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra suave */
+    }
+    
+    .carousel-img {
+        height: 500px; /* Altura fija para todas las imágenes */
+        object-fit: cover; /* Asegura que la imagen cubra el espacio manteniendo proporciones */
+        object-position: center; /* Centra la imagen */
+        filter: brightness(0.8); /* Oscurece ligeramente la imagen para mejor contraste */
+        transition: filter 0.5s ease; /* Transición suave para el efecto hover */
+    }
+    
+    .carousel-link:hover .carousel-img {
+        filter: brightness(1); /* Aclara la imagen al pasar el mouse */
+    }
+    
+    .carousel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3)); /* Degradado suave */
+        pointer-events: none; /* Permite hacer clic en el enlace */
+    }
+    
+    /* Ajustes para dispositivos móviles */
+    @media (max-width: 768px) {
+        .carousel-img {
+            height: 300px;
+        }
+    }

@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- Menú Navbar-->
-<nav class="navbar navbar-expand-lg custom-navbar-with-bg">
+<nav class="navbar navbar-expand-lg  fixed-top navbar-light bg-light">
   <div class="container">
     <!-- Logo y Botón Toggler -->
     <a class="navbar-brand" href="#">
@@ -28,31 +28,38 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav justify-content-center mx-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+          <a class="nav-link" aria-current="page" href="#">INICIO</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">CONMGES</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">CONMGES</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">CONMGES 2025</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">IAAPS</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">GLOSA IV</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">GLOSA IV</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">GLOSA IV 2025</a></li>
+          </ul>
         </li>
-    </ul>
-  </div>
+      </ul>
+    </div>
   </div>
 </nav>
 
 
 
+
 <!-- cuadricula de contenido -->
 
-<div class="container my-5">
+<div class="container my-5 mt-5">
         <!-- Fila 1: 3 columnas superiores -->
         <div class="row mb-4">
             <!-- Tarjeta 1 -->
-            <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-3 mt-5">
                 <div class="card h-100 border-0">
                     <img src="{% static 'img/gestiionclinica.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 1">
                     <div class="card-body">
@@ -63,7 +70,7 @@
             </div>
             
             <!-- Tarjeta 2 -->
-            <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-3 mt-5">
                 <div class="card h-100 border-0">
                     <img src="{% static 'img/metassanitarias.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 2">
                     <div class="card-body">
@@ -74,7 +81,7 @@
             </div>
             
             <!-- Tarjeta 3 -->
-            <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-3 mt-5">
                 <div class="card h-100 border-0">
                     <img src="{% static 'img/CONMGES2025.JPG'%}" class="card-img-top rounded-circle" alt="Imagen 3">
                     <div class="card-body">
@@ -88,7 +95,7 @@
         <!-- Fila 2: 3 columnas inferiores -->
         <div class="row">
             <!-- Tarjeta 4 -->
-            <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-3 mt-5">
                 <div class="card h-100 border-0">
                     <img src="{% static 'img/conmgess.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 4">
                     <div class="card-body">
@@ -99,23 +106,23 @@
             </div>
             
             <!-- Tarjeta 5 -->
-            <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-3 mt-5">
                 <div class="card h-100 border-0">
                     <img src="{% static 'img/unidadsslr.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 5">
                     <div class="card-body">
                         <h5 class="card-title text-center">Unidades SSLR</h5>
-                        <a href="#" class="btn btn-primary">Más información</a>
+                        <a href="https://sslosrios.redsalud.gob.cl/equipo-directivo/" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
             </div>
             
             <!-- Tarjeta 6 -->
-            <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-3 mt-5">
                 <div class="card h-100 border-0">
                     <img src="{% static 'img/intranet.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 6">
                     <div class="card-body">
                         <h5 class="card-title text-center">Intranet SSLR</h5>
-                        <a href="#" class="btn btn-primary">Más información</a>
+                        <a href="https://sslosrios.redsalud.gob.cl/inicio/" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
             </div>
@@ -123,70 +130,81 @@
     </div>
 
 <!-- Cartas Horizontales -->
+<!-- Contenedor principal centrado -->
+<div class="container my-5">
+  <!-- Primera Carta Horizontal (imagen a la izquierda) -->
+  <div class="row justify-content-center mb-4">
+    <div class="col-lg-10">
+      <div class="card mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'img/ssalr.jpeg' %}" class="img-fluid rounded-start h-100" alt="Servicio Salud Los Ríos" style="object-fit: cover;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Sitio Web Servicio Salud Los Ríos</h5>
+              <p class="card-text">Ingresa aquí al sitio oficial del Servicio de Salud Los Ríos</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="https://sslosrios.redsalud.gob.cl/" class="btn btn-primary btn-sm">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Segunda Carta Horizontal (imagen a la derecha) -->
+  <div class="row justify-content-center mb-4">
+    <div class="col-lg-10">
+      <div class="card mb-4">
+        <div class="row g-0 flex-row-reverse"> <!-- flex-row-reverse para invertir el orden -->
+          <div class="col-md-4">
+            <img src="{% static 'img/guiaymanuales.jpg' %}" class="img-fluid rounded-start h-100" alt="Guías y Manuales" style="object-fit: cover;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Guías Y Manuales</h5>
+              <p class="card-text">Encuentra aquí las guías y manuales de los distintos instrumentos de medición gestión</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Primera Carta Horizontal -->
-<div class="custom-card-container card-ssalr">
-  <div class="card mb-4">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="{% static 'img/ssalr.jpeg' %}" class="img-fluid rounded-start h-100" alt="Servicio Salud Los Ríos" style="object-fit: cover;">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Sitio Web Servicio Salud Los Ríos</h5>
-          <p class="card-text">Ingresa aquí al sitio oficial del Servicio de Salud Los Ríos</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <a href="#" class="btn btn-primary btn-sm">Ver más</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Segunda Carta Horizontal -->
-<div class="custom-card-container card-guias">
-  <div class="card mb-4">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="{% static 'img/guiaymanuales.jpg' %}" class="img-fluid rounded-start h-100" alt="Guías y Manuales" style="object-fit: cover;">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Guías Y Manuales</h5>
-          <p class="card-text">Encuentra aquí las guías y manuales de los distintos instrumentos de medición gestión</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <a href="#" class="btn btn-primary btn-sm">Ver más</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Carrusel -->
 <section id="carrusel">
-    <div class="container my-custom-carousel">  <!-- Contenedor con clase personalizada -->
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">  <!-- Intervalo de 3 segundos -->
+    <div class="container my-custom-carousel">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
-                <!-- Primer slide con enlace -->
+                <!-- Primer slide -->
                 <a href="tu_pagina_destino_1.html" class="carousel-link">
-                    <div class="carousel-item active" style="max-height: 700px;">
-                        <img src="{% static 'img/cuentapublica.png'%}" class="d-block w-100" alt="Campaña de invierno">
+                    <div class="carousel-item active">
+                        <img src="{% static 'img/cuentapublica.png'%}" class="d-block w-100 carousel-img" alt="Campaña de invierno">
+                        <div class="carousel-overlay"></div>
                     </div>
                 </a>
                 
-                <!-- Segundo slide con enlace -->
+                <!-- Segundo slide -->
                 <a href="tu_pagina_destino_2.html" class="carousel-link">
-                    <div class="carousel-item" style="max-height: 700px;">
-                        <img src="{% static 'img/donemossangre.jpg'%}" class="d-block w-100" alt="Gestión">
+                    <div class="carousel-item">
+                        <img src="{% static 'img/donemossangre.jpg'%}" class="d-block w-100 carousel-img" alt="Gestión">
+                        <div class="carousel-overlay"></div>
                     </div>
                 </a>
                 
-                <!-- Tercer slide con enlace -->
+                <!-- Tercer slide -->
                 <a href="tu_pagina_destino_3.html" class="carousel-link">
-                    <div class="carousel-item" style="max-height: 700px;">
-                        <img src="{% static 'img/yomevacuno.png'%}" class="d-block w-100" alt="Metas sanitarias">
+                    <div class="carousel-item">
+                        <img src="{% static 'img/yomevacuno.png'%}" class="d-block w-100 carousel-img" alt="Metas sanitarias">
+                        <div class="carousel-overlay"></div>
                     </div>
                 </a>
             </div>
@@ -207,7 +225,7 @@
 <!-- Footer -->
 
 <div class="footer">
-  <div class="container-fluid bg-dark p-5">
+  <div class="container-fluid bg-dark p-5 mt-5">
     <div class="row align-items-center">
       <!-- Columna izquierda - Información de contacto -->
       <div class="col-md-6 contact-info">
@@ -221,11 +239,11 @@
       <!-- Columna derecha - Redes sociales -->
       <div class="col-md-6 social-icons">
         <div class="d-flex justify-content-end">
-          <a href="#" class="text-decoration-none text-white mx-3"><i class="bi bi-facebook fs-4"></i></a>
-          <a href="#" class="text-decoration-none text-white mx-3"><i class="bi bi-instagram fs-4"></i></a>
-          <a href="#" class="text-decoration-none text-white mx-3"><i class="bi bi-twitter-x fs-4"></i></a>
-          <a href="#" class="text-decoration-none text-white mx-3"><i class="bi bi-youtube fs-4"></i></a>
-          <a href="#" class="text-decoration-none text-white mx-3"><i class="fa-brands fa-flickr fs-4"></i></a>
+          <a href="https://www.facebook.com/saludlosrios" class="text-decoration-none text-white mx-3"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="https://www.instagram.com/ssaludlosrios/" class="text-decoration-none text-white mx-3"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="https://x.com/ssaludlosrios" class="text-decoration-none text-white mx-3"><i class="bi bi-twitter-x fs-4"></i></a>
+          <a href="https://www.youtube.com/@serviciosaludlosrios1400" class="text-decoration-none text-white mx-3"><i class="bi bi-youtube fs-4"></i></a>
+          <a href="https://www.flickr.com/photos/serviciosaludlosrios/albums" class="text-decoration-none text-white mx-3"><i class="fa-brands fa-flickr fs-4"></i></a>
         </div>
       </div>
     </div>
