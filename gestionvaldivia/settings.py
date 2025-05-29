@@ -120,7 +120,7 @@ USE_TZ = True
 # Archivos estáticos (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
  # Donde buscan los archivos estáticos
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')    # Donde se recolectan para producción
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')    # Donde se recolectan para producción
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'appgestion/static')] 
 # Archivos multimedia (uploads)
 MEDIA_URL = '/media/'

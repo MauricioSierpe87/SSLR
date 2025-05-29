@@ -14,6 +14,14 @@
     <link rel="icon" href="data:,">
 </head>
 <body>
+{% load static %}  <!-- Debe ir al inicio del archivo -->
+
+<style>
+    body {
+        background-image: url("{% static 'img/marco2.jpg' %}");
+        background-size: cover;
+    }
+</style>
     <!-- Menú Navbar-->
 <nav class="navbar navbar-expand-lg  fixed-top navbar-light bg-light">
   <div class="container">
@@ -32,7 +40,7 @@
           <a class="nav-link" aria-current="page" href="#">INICIO</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">CONMGES</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">COMGES</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">COMGES 2025</a></li>
           </ul>
@@ -58,76 +66,59 @@
 
 <div class="container my-5 mt-5">
         <!-- Fila 1: 3 columnas superiores -->
-        <div class="row mb-4">
+        <div class="row mb-4 justify-content-center mt-5">
             <!-- Tarjeta 1 -->
-            <div class="col-md-4 mb-3 mt-5">
-                <div class="card h-100 border-0">
-                    <img src="{% static 'img/gestiionclinica.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 1">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Gestión Clínica</h5>
-                        <a href="#" class="btn btn-primary">Más información</a>
-                    </div>
-                </div>
-            </div>
+    <div class="col-md-4 mb-3 d-flex justify-content-center">
+      <div class="card round-card">
+        <img src="{% static 'img/gestiionclinica.jpg' %}" alt="Gestión Clínica">
+        <h5 class="card-title">Gestión Clínica</h5>
+        <a href="#"></a>
+      </div>
+    </div>
             
             <!-- Tarjeta 2 -->
-            <div class="col-md-4 mb-3 mt-5">
-                <div class="card h-100 border-0">
-                    <img src="{% static 'img/metassanitarias.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 2">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Metas Sanitarias 2025</h5>
-                        <a href="#" class="btn btn-primary">Más información</a>
-                    </div>
-                </div>
-            </div>
+            <div class="col-md-4 mb-3 d-flex justify-content-center">
+      <div class="card round-card">
+        <img src="{% static 'img/metassanitarias.jpg' %}" alt="Metas Sanitarias 2025">
+        <h5 class="card-title">Metas Sanitarias 2025</h5>
+        <a href="#"></a>
+      </div>
+    </div>
             
             <!-- Tarjeta 3 -->
-            <div class="col-md-4 mb-3 mt-5">
-                <div class="card h-100 border-0">
-                    <img src="{% static 'img/CONMGES2025.JPG'%}" class="card-img-top rounded-circle" alt="Imagen 3">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Avance COMGES 2025</h5>
-                        <a href="#" class="btn btn-primary">Más información</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+          
+  </div>  
 
         <!-- Fila 2: 3 columnas inferiores -->
         <div class="row">
             <!-- Tarjeta 4 -->
-            <div class="col-md-4 mb-3 mt-5">
-                <div class="card h-100 border-0">
-                    <img src="{% static 'img/conmgess.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 4">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Resultado Conmges 2025</h5>
-                        <a href="#" class="btn btn-primary">Más información</a>
-                    </div>
-                </div>
-            </div>
+           <div class="row justify-content-center">
+    <div class="col-md-4 mb-3 d-flex justify-content-center">
+      <div class="card round-card">
+        <img src="{% static 'img/conmgess.jpg' %}" alt="Resultado COMGES 2025">
+        <h5 class="card-title">COMGES 2025</h5>
+        <a href="#"></a>
+      </div>
+    </div>
             
             <!-- Tarjeta 5 -->
-            <div class="col-md-4 mb-3 mt-5">
-                <div class="card h-100 border-0">
-                    <img src="{% static 'img/unidadsslr.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 5">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Unidades SSLR</h5>
-                        <a href="https://sslosrios.redsalud.gob.cl/equipo-directivo/" class="btn btn-primary">Más información</a>
-                    </div>
-                </div>
-            </div>
+             <div class="col-md-4 mb-3 d-flex justify-content-center">
+      <div class="card round-card">
+        <img src="{% static 'img/unidadsslr.jpg' %}" alt="Unidades SSLR">
+        <h5 class="card-title">Unidades SSLR</h5>
+        <a href="#"></a>
+      </div>
+    </div>
             
             <!-- Tarjeta 6 -->
-            <div class="col-md-4 mb-3 mt-5">
-                <div class="card h-100 border-0">
-                    <img src="{% static 'img/intranet.jpg'%}" class="card-img-top rounded-circle" alt="Imagen 6">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Intranet SSLR</h5>
-                        <a href="https://sslosrios.redsalud.gob.cl/inicio/" class="btn btn-primary">Más información</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="col-md-4 mb-3 d-flex justify-content-center">
+      <div class="card round-card">
+        <img src="{% static 'img/intranet.jpg' %}" alt="Intranet SSLR">
+        <h5 class="card-title">Intranet SSLR</h5>
+        <a href="#"></a>
+      </div>
+    </div>
+  </div>
     </div>
 
 <!-- Cartas Horizontales -->
@@ -225,6 +216,8 @@
 
 <!-- Footer -->
 
+<!-- Footer -->
+
 <div class="footer">
   <div class="container-fluid bg-dark p-5 mt-5">
     <div class="row align-items-center">
@@ -257,7 +250,6 @@
     </div>
   </div>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
