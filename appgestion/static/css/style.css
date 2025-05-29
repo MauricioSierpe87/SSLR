@@ -95,7 +95,7 @@ body
   
   /* Estilos para los enlaces del navbar */
   .navbar-nav .nav-link {
-    color: red ;
+    color: black ;
     font-weight: 500;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
