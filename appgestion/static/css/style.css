@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-   /* Reemplaza con la ruta correcta */
+   
     background-size: cover; /* Cubre todo el fondo sin distorsión */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que se repita */
@@ -53,20 +53,21 @@ body {
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  background-color: #d282ac;
   
   /* Agrega aquí estilos que quieras aplicar a ambas tarjetas */
 }
 
 /* Estilos específicos para la tarjeta del Servicio de Salud */
 .custom-card-container.card-ssalr {
-  background-color: #f8f9fa; /* Ejemplo: fondo gris claro */
-  border: 1px solid #dee2e6; /* Ejemplo: borde sutil */
+  background-color: #d282ac; /* Ejemplo: fondo gris claro */
+  border: 1px solid #d282ac; /* Ejemplo: borde sutil */
   
 }
 
 /* Estilos específicos para la tarjeta de Guías y Manuales */
 .custom-card-container.card-guias {
-  background-color: #e9ecef; /* Ejemplo: fondo gris un poco más oscuro */
+  background-color: #d282ac; /* Ejemplo: fondo gris un poco más oscuro */
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Ejemplo: sombra sutil */
 }
 
@@ -83,9 +84,15 @@ body {
 /* Navbar con imagen de fondo */
 /* Estilos para el navbar transparente */
   .navbar-transparent {
-    background-color: red ;
+    background-color: transparent !important;
+    backdrop-filter: blur(5px);
     transition: background-color 0.3s ease;
   }
+
+  .navbar-light {
+    background-color: #e2d7e0 !important; /* Color de fondo del navbar */
+    color: black !important; /* Color del texto del navbar */
+}
   
   /* Navbar con color al hacer scroll */
   .navbar-scrolled {
@@ -103,6 +110,7 @@ body {
     font-weight: 500;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
+    
   }
   
   .navbar-nav .nav-link:hover {
@@ -119,7 +127,7 @@ body {
     height: 30px;
   }
 .custom-navbar-with-bg {
-  background-image: ('/static/img/fondo1.jpg'); /* Cambia la URL por la de tu imagen */
+  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -174,9 +182,7 @@ body {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-.custom-navbar-with-bg .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
+
 
 /* Ajustes para móviles */
 @media (max-width: 992px) {
