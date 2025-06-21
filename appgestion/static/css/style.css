@@ -1,0 +1,232 @@
+/* ================= PALETA DE COLORES INSTITUCIONALES =================== */
+:root {
+  --azul-institucional: #004B8D;
+  --rojo-institucional: #C8102E;
+  --celeste-institucional: #6BB2E1;
+  --azul-oscuro: #1E5F74;
+  --gris-claro: #E5E5E5;
+  --blanco: #FFFFFF;
+  --negro: #000000;
+}
+
+/* ================= RESET Y BASE =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--blanco);
+}
+
+body {
+  background-image: url("/static/img/ig12.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+  z-index: 1;
+  position: relative;
+}
+
+/* ================= NAVBAR =================== */
+
+.navbar {
+  background-color: var(--azul-oscuro) !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.navbar-nav .nav-link {
+  color: var(--blanco) !important;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Mejora legibilidad */
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--azul-institucional) !important;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  text-shadow: none;
+}
+
+.navbar-logo {
+  height: 50px;
+  transition: height 0.3s ease;
+}
+
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(5px);
+}
+
+.navbar-scrolled .nav-link {
+  color: var(--celeste-institucional) !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+/* ================= TARJETAS CIRCULARES =================== */
+.card.round-card {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  background-color: var(--azul-institucional);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  color: white;
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+
+.card.round-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card.round-card:hover {
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .card.round-card {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card.round-card {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ================= SECCIÓN ENCABEZADO FONDO =================== */
+.bg-fondo-institucional {
+  background-image: url("/static/img/ig12.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: rgb(213, 215, 241);
+}
+
+.bg-fondo-institucional h1,
+.bg-fondo-institucional p.lead {
+  color: var(--azul-oscuro);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* ================= TARJETAS HORIZONTALES =================== */
+.card.mb-4 {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  background-color: var(--celeste-institucional);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card.mb-4 img {
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.flex-row-reverse .col-md-4 img {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+
+/* ================= FOOTER =================== */
+footer.footer {
+  background-color: var(--azul-oscuro);
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer.footer a:hover {
+  color: var(--celeste-institucional);
+}
+
+.barra-footer {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--rojo-institucional), white, var(--azul-institucional));
+  border-radius: 4px;
+}
+
+footer.footer-institucional {
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+@media (max-width: 576px) {
+  footer.footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer.footer .col-md-6 {
+    margin-bottom: 1rem;
+  }
+
+  .barra-footer {
+    margin: 1rem 0;
+  }
+}
+
+/* ================= RESPONSIVE BACKGROUND =================== */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}

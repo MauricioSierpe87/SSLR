@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Gestión de Excel{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Gestión de Archivos Excel</h2>
+
+    <div class="card shadow">
+        <div class="card body">
+            <fomr method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="excel_file" class="form-label">Selecciona un archivo Excel</label>
+                    <input type="file" class="form-control" id="excel_file" name="excel_file" accept=".xlsx, .xls" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Subir Archivo</button>
+        </div>
+         <a href="{% url 'admin_panel' %}" class="btn btn-secondary mt-3">
+            <i class="fas fa-arrow-left me-2"></i> Volver al Panel
+        </a>
+    </div>
+</div>
+{% endblock %}

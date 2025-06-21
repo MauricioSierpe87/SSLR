@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h2 class="mb-4">Panel de Administración</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Opciones de Configuración</h4>
+                    <p class="card-text">Seleccione el tipo de configuración que desea realizar:</p>
+                    
+                    <div class="d-flex justify-content-center gap-4 mt-4">
+                        <a href="{% url 'excel_manager' %}" class="btn btn-primary btn-lg">
+                            <i class="fas fa-file-excel me-2"></i> Configuración Excel
+                        </a>
+                        <a href="{% url 'powerbi_config' %}" class="btn btn-warning btn-lg">
+                            <i class="fas fa-chart-bar me-2"></i> Configuración Power BI
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

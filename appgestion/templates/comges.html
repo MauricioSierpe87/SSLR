@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}COMGES - Servicio Salud Los Ríos{% endblock %}
+
+{% block content %}
+<div class="container my-5 py-4">
+  <h2 class="text-center mb-4">Compromisos de Gestión (COMGES)</h2>
+
+  <p class="text-center mb-5">
+    Visualización de los indicadores de gestión configurados en Power BI
+  </p>
+
+  <!-- Contenedor para el informe de Power BI -->
+  <div class="ratio ratio-16x9 mb-5">
+    <iframe 
+      src="https://app.powerbi.com/view?r=TU_ID_DE_INFORME_AQUI" 
+      frameborder="0" 
+      allowFullScreen="true"
+      style="border: none;"
+    ></iframe>
+  </div>
+
+  <!-- Opcional: Mensaje alternativo si Power BI no está configurado -->
+  <div class="alert alert-info d-none" id="powerbi-alert">
+    El informe de Power BI no está configurado actualmente.
+  </div>
+</div>
+
+<script>
+  // Opcional: Puedes añadir lógica para manejar cuando no hay iframe configurado
+  document.addEventListener('DOMContentLoaded', function() {
+    const iframe = document.querySelector('iframe');
+    if (!iframe || !iframe.src.includes('powerbi.com')) {
+      document.getElementById('powerbi-alert').classList.remove('d-none');
+      if (iframe) iframe.classList.add('d-none');
+    }
+  });
+</script>
+
+{% endblock %}
